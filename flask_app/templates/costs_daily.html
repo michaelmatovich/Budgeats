@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budgeats - Home Food Cost Analysis</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/style_pantry.css') }}">
+    
+</head>
+<body>
+    <div class="whole">
+        <header class = "flex">
+            <div>
+                <a href="/"><img src="{{ url_for('static', filename ='/images/logo.png') }}" href = "/" id = "logo" alt="Budgeats logo"></a>            
+            </div>
+            <div>
+                <h2><a href="/dashboard">dashboard</a></h2>
+                <h2><a href="/pantry">pantry</a></h2>
+                <h2><a href="/recipes">recipes</a></h2>
+                <h2 class = "orange">cost analysis</a></h2>
+            </div>
+            <div>
+            <p><a href="/logout">Settings</a> | <a href="/logout">Logout</a></p>
+            </div>
+        </header>
+        <div class="header2 flex-center">
+                <h2><a href="/costs">SUMMARY</a></h2>
+                <h2 class = "selected">DAILY</h2>
+                <h2><a href="/costs/weekly">WEEKLY</a></h2>
+                <h2><a href="/costs/history">HISTORY</a></h2>
+                <h2><a href="/costs/custom">CUSTOM</a></h2>            
+        </div>
+    <main class>        
+        <br><br>
+        <h1>Daily Cost Analysis</h1>
+        <br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Ingredient</th>
+                    <th>Quantity Used</th>
+                    <th>Cost Per Unit</th>
+                    <th>Use Type</th>                    
+                    <th>Total Cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for transaction in daily_transactions %}
+                <tr>
+                    <td>{{transaction.use_date}}</td>
+                    <td>{{transaction.ingredient.ingredient_name}}</td>
+                    <td>{{transaction.quantity_used}}</td>
+                    <td>${{transaction.ingredient.cost_per_unit}}</td>
+                    <td>{{transaction.use_type}}</td>                
+                    <td>${{transaction.total_cost}}</td>
+                    {% endfor %}                    
+                </tr>
+                <tr>
+                    <td class = "white"></td>
+                    <td class = "white"></td>
+                    <td class = "white"></td>
+                    <td class = "white"></td>
+                    <td class = "white"></td>
+                    <td class = "green"> ${{total}} </td>
+                </tr>             
+            </tbody>
+        </table>
+        <br><br>
+    </main>
+    </div>
+</body>
+</html>

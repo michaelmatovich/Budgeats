@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budgeats - Home Food Cost Analysis</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/style_pantry.css') }}">
+    
+</head>
+<body>
+    <div class="whole">
+        <header class = "flex">
+            <div>
+                <a href="/"><img src="{{ url_for('static', filename ='/images/logo.png') }}" href = "/" id = "logo" alt="Budgeats logo"></a>             
+            </div>
+            <div>
+                <h2><a href="/dashboard">dashboard</a></h2>
+                <h2 class = "orange">pantry</h2>
+                <h2><a href="/recipes">recipes</a></h2>
+                <h2><a href="/costs">cost analysis</a></h2>
+            </div>
+            <div>
+            <p><a href="/logout">Settings</a> | <a href="/logout">Logout</a></p>
+            </div>
+        </header>
+        <div class="header2 flex-center">
+            
+                <h2><a href="/pantry/view">VIEW</a></a></h2>
+                <h2><a href="/pantry/add">ADD</a></h2>
+                <h2><a href="/pantry/use">USE</a></h2>
+                <h2 class = "selected">EDIT</a></h2>            
+        </div>
+    <main class>
+        <br><br>
+        <h1>Edit Ingredients</h1><br><br>
+        {% for ingredient in all_ingredients %}
+        <div class = "flex editbox">
+            <form action="/pantry/edit/{{ingredient.id}}" method = "post" class = "flex">
+            <div class = "flex editbox">
+                <h3>Ingredient Name: </h3>
+                <input type="text" name="ingredient_name" class = "textbar" value = "{{ingredient.ingredient_name}}">
+            </div>
+            <div class = "flex editbox">
+                <h3>Type: </h3>
+                <input type="text" name="type" class = "textbar" value = "{{ingredient.type}}">
+            </div>
+            <div class = "flex editbox">
+                <h3>Measurement: </h3>
+                <input type="text" name="measure_type" class = "textbar" value = "{{ingredient.measure_type}}">
+            </div>
+            <div class = "flex editbox">
+                <h3>Quantity: </h3>
+                <input type="number" name="quantity" class = "textbar" value = "{{ingredient.quantity}}">
+            </div>
+            <div class = "flex editbox">
+                <h3>Price: $ </h3>
+                <input type="number" name="total_cost" class = "textbar" value = "{{ingredient.total_cost}}">
+            </div>
+            <input type="submit" value="Edit" id="add">
+            <a href="/pantry/delete/{{ingredient.id}}" class = "delete">Delete</a>
+            </form>
+        </div>
+        <br>
+        {% endfor %}             
+            
+            
+            
+
+
+
+        <br><br>   
+            <p>{% with messages = get_flashed_messages() %}
+            {% if messages %}                            
+                {% for message in messages %}            
+                    <h2 id = "error">{{message}}</h2><br>                  
+                {% endfor %}
+            {% endif %}
+            {% endwith %}</p>
+    </main>
+    </div>
+</body>
+</html>

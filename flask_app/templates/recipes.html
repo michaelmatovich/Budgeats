@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budgeats - Home Food Cost Analysis</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/style_pantry.css') }}">
+    
+</head>
+<body>
+    <div class="whole">
+        <header class = "flex">
+            <div>
+                <a href="/"><img src="{{ url_for('static', filename ='/images/logo.png') }}" href = "/" id = "logo" alt="Budgeats logo"></a>            
+            </div>
+            <div>
+                <h2><a href="/dashboard">dashboard</a></h2>
+                <h2><a href="/pantry">pantry</a></h2>
+                <h2 class = "orange">recipes</h2>
+                <h2><a href="/costs">cost analysis</a></h2>
+            </div>
+            <div>
+            <p><a href="/logout">Settings</a> | <a href="/logout">Logout</a></p>
+            </div>
+        </header>
+        <div class="header2 flex-center">
+            
+                <h2 class = "selected">VIEW</a></h2>
+                <h2><a href="/recipes/create">CREATE</a></h2>
+                <h2><a href="/recipes/edit">EDIT</a></h2>
+                <h2><a href="/recipes/browse">BROWSE</a></h2>         
+        </div>
+    <main class>
+        
+    </main>
+    </div>
+</body>
+</html>

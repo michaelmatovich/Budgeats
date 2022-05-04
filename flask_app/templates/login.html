@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budgeats - Home Food Cost Analysis</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/style_login.css') }}">
+    
+</head>
+<body>
+    <div class="whole">
+    <header class = "container flex">
+        <div>
+            <h2>LOGO</h2>
+        </div>
+        <div>
+        <p><a href="/signup">Sign Up</a></p>
+        </div>
+    </header>
+    <main class = "flex">
+        <div class="spacer">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}                            
+                {% for message in messages %}            
+                    <p>{{message}}</p><br>                  
+                {% endfor %}
+            {% endif %}
+            {% endwith %}
+        </div>
+        
+        <div class="right-column container">
+            <br><br>
+            <h2>Login</h2><br>
+            <form action="/login/process" method = "post">
+                <p>Username:</p>
+                <input type="text" name="username" class = "textbar2">
+                <p>Password:</p>
+                <input type="password" name="password" class = "textbar2">
+                <br><br><br>
+                <input type="submit" value = "Login" id="login">
+            </form>
+        </div>
+        <br>
+        
+        <div class="spacer"></div>
+        
+    </main>
+    
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+/* reset */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;  
+
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container{
+    width: 70%;
+    margin: 0 auto;
+    min-height: 50px;
+}
+header{
+    
+    border: 2px solid #141526;
+    padding: .5rem 2rem;
+    width: 100%;
+}
+main{
+    width: 70%;
+    min-height: 100px;
+    background-color: white;
+    margin: 0 auto;
+    
+    border-bottom: 2px solid #141526;
+    border-left: 2px solid #141526;
+    border-right: 2px solid #141526;
+
+    text-align: center;
+}
+.whole{
+    border: 1px dotted black;
+    min-height: 100px;
+}
+.spacer{
+    flex: 1;
+    background-color: #575f68;
+    min-height: 50px;
+    margin: 0 auto;
+    padding: .5rem 1rem;
+}
+main{
+    width: 70%;
+    background-color: #575f68;
+    min-height: 100px;
+    margin: 0 auto;
+    padding: 15px;
+}
+.left-column h2{
+    color: lightskyblue;
+}
+.left-column{
+    margin-right: 20px;
+    width: 25%;
+    
+}
+.right-column{
+    width: 25%;
+    
+    min-height: 377px;
+}
+.right-column h2{
+    color: lightgreen;   
+}
+.left-column p{
+    color: white;
+}
+.right-column p{
+    color: white;
+}
+
+p{
+    color: black;
+    margin-bottom: 5px;
+}
+.textbar{
+    background-color: aliceblue;
+    margin-bottom: 5px;
+    width: 70%;
+}
+.textbar2{
+    /* background-color: #e5fbe5; */
+    background-color:#f6fef6;
+    margin-bottom: 5px;
+    width: 70%;
+}
+#register{
+    padding: .25em .5em;
+    background-color: lightskyblue;
+    color: black;
+    font-weight:bold;
+    
+}
+#login{
+    padding: .25em .5em;
+    background-color: lightgreen;
+    color: black;
+    font-weight: bold;
+}
+.spacer p{
+    /* background-color: #FFF2F2; */
+    background-color: #ffdede;
+    color: #34393e;
+    padding: .25rem .5rem;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+    width: 80%;
+    margin: 0 auto;
+}

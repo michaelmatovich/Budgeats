@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budgeats - Home Food Cost Analysis</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/style.css') }}">
+    
+</head>
+<script>
+function druids()
+{
+    alert("Druids are the BEST!");
+}
+</script>
+<body>
+    <div class="whole">
+    <header class = "flex">
+        <div>
+            <img src="{{ url_for('static', filename ='/images/logo.png') }}" id = "logo" alt="" onclick = "druids()">            
+        </div>
+        <div>
+            <h2 id= "home">home</h2>
+            <h2>about</h2>
+            <h2>testimonials</h2>
+            <h2>how it works</h2>
+        </div>
+        <div>
+        <p><a href="/signup">Sign Up</a> | <a href="/login">Login</a></p>
+        </div>
+    </header>
+    <div class = "relative">
+        <img src="{{ url_for('static', filename ='/images/dinner.jpeg') }}" alt="" id = "dinnertable">
+        <h1 class = "absolute itext">TAKE CHARGE OF YOUR FOOD SPENDING AT HOME</h1>
+    </div>
+    <br><br>
+    <div class = "flex-center">
+        <div class="circle">
+            <img src="{{ url_for('static', filename ='/images/dollarbill.jpg') }}" alt="">
+        </div>
+        <div class = "textbox">
+            <h2>Save Money</h2>
+            <br>
+            <p>Learn areas where your food spending and waste might be higher than others. Simple awareness saves money! </p>
+        </div>
+        <div class="circle">
+            <img src="{{ url_for('static', filename ='/images/stats.png') }}" alt="">            
+        </div>
+        <div class = "textbox">
+            <h2>Visualize Costs</h2><br>
+            <p>Visualize your data quickly to assess patterns of overspending. Compare your spending with others!</p>
+        </div>
+        <div class="circle">
+            <img src="{{ url_for('static', filename ='/images/connect.png') }}" alt="">            
+        </div>
+        <div class = "textbox">
+            <h2>Connect with Others</h2><br>
+            <p>Create, share and view recipes that are delicious and cost-effective! Join a community that shares success!</p>
+        </div>
+    </div>
+    <br><br>
+    <main>
+        <br><br>
+        <h3>Signing up is quick, easy and free. No personal information required!</h3>
+        <br><br>   
+        
+    </main><br><br>
+    <h1 id = "blah">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis est possimus ea, atque quidem totam aspernatur cupiditate numquam quas repellat amet repudiandae accusantium eos sed alias quos. Aspernatur dolores enim magnam laborum illum velit nostrum aliquid id modi ad est a provident, quia quam blanditiis in aut iusto vel! Nam totam eligendi fugiat enim magnam quidem voluptate at aliquid unde exercitationem. Dicta officiis laborum minus. Sed, assumenda eveniet excepturi tempora dignissimos, sunt illo, a ducimus quo cum asperiores non beatae voluptatibus exercitationem? Corrupti tempora aliquam enim quidem consequatur hic facere neque magnam sit nostrum itaque, quam ipsam, quibusdam distinctio voluptas!</h1>
+    </div>
+</body>
+</html>

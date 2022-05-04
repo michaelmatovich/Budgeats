@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budgeats - Home Food Cost Analysis</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/style.css') }}">
+    
+</head>
+<body>
+    <div class="whole">
+        <header class = "flex">
+            <div>
+            <a href="/"><img src="{{ url_for('static', filename ='/images/logo.png') }}" href = "/" id = "logo" alt="Budgeats logo"></a>            
+            </div>
+            <div>
+                <h2 id= "home">dashboard</h2>
+                <h2><a href="/pantry">pantry</a></h2>
+                <h2><a href="/recipes">recipes</a></h2>
+                <h2><a href="/costs">cost analysis</a></h2>
+            </div>
+            <div>
+            <p><a href="/logout">Settings</a> | <a href="/logout">Logout</a></p>
+            </div>
+        </header>
+    <main class>
+        <h1>Welcome Back, {{user.username}}!</h1><br><br>
+        <h2>Featured Recipe</h2><br>
+        <div class="featuredrecipe flex">
+            
+            <div class="recipe">
+                <h2>Ramen</h2>
+            </div>
+        </div>
+        <br><br>
+        
+    </main>
+
+    </div>
+</body>
+</html>

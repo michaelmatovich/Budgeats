@@ -1,0 +1,21 @@
+#141526 - speedtest blue
+
+#e9e9f3 -tint variation
+
+#6afff3 - light blue
+
+#9b6eff - cool purple
+
+#6f718c - light grayish
+
+dojo black - 121212
+
+dojo light gray - 2a2a2a
+
+dojo light blue
+
+front-end work, understanding datetime objects and 
+
+333
+
+autoloans.com

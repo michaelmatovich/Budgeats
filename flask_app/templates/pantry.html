@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budgeats - Home Food Cost Analysis</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/style_pantry.css') }}">
+    
+</head>
+<body>
+    <div class="whole">
+        <header class = "flex">
+            <div>
+                <a href="/"><img src="{{ url_for('static', filename ='/images/logo.png') }}" href = "/" id = "logo" alt="Budgeats logo"></a>            
+            </div>
+            <div>
+                <h2><a href="/dashboard">dashboard</a></h2>
+                <h2 class = "orange">pantry</h2>
+                <h2><a href="/recipes">recipes</a></h2>
+                <h2><a href="/costs">cost analysis</a></h2>
+            </div>
+            <div>
+            <p><a href="/logout">Settings</a> | <a href="/logout">Logout</a></p>
+            </div>
+        </header>
+        <div class="header2 flex-center">
+            
+                <h2 class = "selected">VIEW</a></h2>
+                <h2><a href="/pantry/add">ADD</a></h2>
+                <h2><a href="/pantry/use">USE</a></h2>
+                <h2><a href="/pantry/edit">EDIT</a></h2>            
+        </div>
+    <main class>
+        <br><br>
+        <h1>Current Inventory</h1><br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ingredient</th>
+                    <th>Type</th>
+                    <th>Measurement</th>
+                    <th>Quantity</th>
+                    <th>Cost Per Unit</th>
+                    <th>Sale Price</th>                    
+                </tr>
+            </thead>
+            <tbody>
+                {% for ingredient in all_ingredients %}
+                <tr>
+                    <td>{{ingredient.ingredient_name}}</td>
+                    <td>{{ingredient.type}}</td>
+                    <td>{{ingredient.measure_type}}</td>
+                    <td>{{ingredient.quantity}}</td>
+                    <td>{{ingredient.cost_per_unit}}</td>
+                    <td>{{ingredient.total_cost}}</td>                    
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <br><br>
+    </main>
+    </div>
+</body>
+</html>

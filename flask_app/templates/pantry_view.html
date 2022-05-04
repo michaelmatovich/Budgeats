@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budgeats - Home Food Cost Analysis</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/style_dashboard.css') }}">
+    
+</head>
+<body>
+    <div class="whole">
+    <header class = "container flex">
+        <div>
+            <h2>LOGO</h2>
+        </div>
+        <h2>Pantry - Add</h2>
+        <div>
+        <p><a href="/logout">Logout</a></p>
+        </div>
+    </header>
+    <main class>
+        <div class="menubar flex">
+            <h3><a href="/dashboard">Dashboard</a></h3>
+            <h3><a href="/pantry">Pantry</a></h3>
+            <h3><a href="/costs">Costs</a></h3>
+            <h3>Recipes</h3>
+            <h3>Account</h3>
+        </div>
+        <br>
+        <h2>View Pantry</h2><br>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Ingredient</th>
+                    <th>Type</th>
+                    <th>Measurement</th>
+                    <th>Quantity</th>
+                    <th>Cost Per Unit</th>
+                    <th>Sale Price</th>                    
+                </tr>
+            </thead>
+            <tbody>
+                {% for ingredient in all_ingredients %}
+                <tr>
+                    <td>{{ingredient.ingredient_name}}</td>
+                    <td>{{ingredient.type}}</td>
+                    <td>{{ingredient.measure_type}}</td>
+                    <td>{{ingredient.quantity}}</td>
+                    <td>{{ingredient.cost_per_unit}}</td>
+                    <td>{{ingredient.total_cost}}</td>                    
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <br><br>
+    </main>
+    </div>
+</body>
+</html>
